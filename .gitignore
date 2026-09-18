@@ -1,0 +1,16 @@
+.DS_Store
+/.build
+/.swiftpm
+/DerivedData
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+.workbuddy-ai/
+todo.md
+# Personal agent scaffolding, not part of the app
+.agents/
+.claude/
+agent/
+.pi/
+.hermes/
+skills-lock.json
