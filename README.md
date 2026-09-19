@@ -1,4 +1,4 @@
-# VTT (Voice-to-Text)
+# Utter
 
 A fast, minimal, native macOS dictation application inspired by Handy and Fluid Voice. Designed for low runtime footprint on Apple Silicon (M1+), privacy-preserving local transcription via FluidAudio, and reliable system-wide text insertion.
 
@@ -16,8 +16,8 @@ A fast, minimal, native macOS dictation application inspired by Handy and Fluid 
 ## Project Structure
 
 ```text
-vtt/
-├── Package.swift               # Swift 6 package definition (macOS 14+)
+utter/
+├── Package.swift               # Swift 6 package definition (macOS 15+)
 ├── README.md                   # Project overview and build guide
 ├── Packages/
 │   └── FluidAudio/             # Upstream FluidAudio CoreML engine (git submodule, pinned to 41540ea)
@@ -35,7 +35,7 @@ vtt/
 │       ├── REVIEW.md           # Architecture critique & gap analysis
 │       └── REVIEW-union-alpha.md # Independent third-party review
 ├── Sources/
-│   ├── VTTCore/                # Core modular business logic library
+│   ├── UtterCore/              # Core modular business logic library
 │   │   ├── Domain/             # SessionState state machine, DictationMode, TargetApplication
 │   │   ├── Audio/              # 16 kHz mono Int16 capture & AudioLevelMeter
 │   │   ├── Transcription/      # TranscriptionService, Mock, and FluidAudioProvider actor
@@ -45,10 +45,10 @@ vtt/
 │   │   ├── Hotkeys/            # ModifierKeyMonitor & event tap handlers
 │   │   ├── UI/                 # IndicatorPanelController, PillViewModel, MenuBarManager
 │   │   └── Coordinator/        # DictationCoordinator managing full session lifecycle
-│   └── VTT/                    # Application executable entry point
+│   └── Utter/                  # Application executable entry point
 │       └── main.swift          # NSApplicationDelegate setup and service binding
 └── Tests/
-    └── VTTTests/               # Unit test runner exercising core contracts
+    └── UtterTests/             # Unit test runner exercising core contracts
 ```
 
 ## Quick Start
@@ -62,22 +62,22 @@ vtt/
 
 Build the application executable:
 ```bash
-swift build --target VTT
+swift build --target Utter
 ```
 
 Run the unit test suite:
 ```bash
-swift run vtt-test-runner
+swift run utter-test-runner
 ```
 
 Run the application:
 ```bash
-.build/debug/VTT
+.build/debug/Utter
 ```
 
 ### Profiling Efficiency
 
 Measure memory footprint and idle CPU:
 ```bash
-./scripts/measure-efficiency.sh VTT
+./scripts/measure-efficiency.sh Utter
 ```

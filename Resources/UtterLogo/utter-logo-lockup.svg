@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="markBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <radialGradient id="markGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="200" rx="20" fill="#09090B"/>
+  <rect width="718" height="198" x="1" y="1" rx="19" fill="none" stroke="#27272A" stroke-width="1.5"/>
+
+  <!-- Icon Mark (Scale down to 120x120 placed at x=40, y=40) -->
+  <g transform="translate(44, 40)">
+    <rect width="120" height="120" rx="27" fill="url(#markBg)"/>
+    <rect width="118" height="118" x="1" y="1" rx="26" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1"/>
+    <circle cx="60" cy="60" r="48" fill="url(#markGlow)"/>
+
+    <!-- U Vessel -->
+    <path d="M 33.5 35 L 33.5 60.5 A 26.5 26.5 0 0 0 86.5 60.5 L 86.5 35"
+          fill="none"
+          stroke="#F8FAFC"
+          stroke-width="6.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <!-- 3 Waveform Bars -->
+    <rect x="50.5" y="55" width="4.5" height="11.5" rx="2.25" fill="#38BDF8"/>
+    <rect x="57.75" y="50" width="4.5" height="21.5" rx="2.25" fill="#FFFFFF"/>
+    <rect x="65" y="55" width="4.5" height="11.5" rx="2.25" fill="#38BDF8"/>
+  </g>
+
+  <!-- Wordmark: "utter." -->
+  <text x="194" y="116"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif"
+        font-size="64"
+        font-weight="800"
+        letter-spacing="-2.5"
+        fill="#F8FAFC">utter<tspan fill="#38BDF8">.</tspan></text>
+
+  <!-- Tagline / Subtitle -->
+  <text x="196" y="146"
+        font-family="-apple-system, BlinkMacSystemFont, 'SF Mono', 'Menlo', monospace"
+        font-size="12"
+        font-weight="600"
+        letter-spacing="2"
+        fill="#71717A">MINIMAL ON-DEVICE SPEECH INTELLIGENCE</text>
+</svg>

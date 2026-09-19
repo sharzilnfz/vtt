@@ -1,4 +1,4 @@
-# VTT review: gaps, architecture rating, plan rating
+# Utter review: gaps, architecture rating, plan rating
 
 Reviewed: `CONTEXT.md` (5 spec sections, 5 ADRs). The project directory contains no code and no git history, so the specification is the artifact under review.
 
@@ -69,7 +69,7 @@ Ordered by how much each one costs. Structural means it blocks shipping or force
 
 **G12. Hotkeys collide and are hardcoded.** Control+Option is the VoiceOver modifier, so the primary bind fights the built-in screen reader. That hits exactly the population this tool serves. Both binds are fixed while both competitors make the hotkey configurable. The two chords also share Left Option and differ only in the second key, so holding Ctrl+Opt and then adding Cmd matches the refined chord, and releasing in the other order does not. No precedence or debounce rule is defined. A modifier-only chord cannot use `RegisterEventHotKey`, so it needs a `flagsChanged` event tap, which is permission-gated and can be disabled by the OS under load.
 
-**G13. Paths follow Linux convention.** `~/.config/vtt/` is wrong for macOS. The convention is `~/Library/Application Support/vtt/`. Cheap to fix now, annoying later.
+**G13. Paths follow Linux convention.** `~/.config/utter/` is wrong for macOS. The convention is `~/Library/Application Support/utter/`. Cheap to fix now, annoying later.
 
 **G14. No attribution surface.** Parakeet is CC-BY-4.0, so a redistributable app must display attribution. There is no surface for it in Section 3 or Section 6. The app's own license is never stated either, which matters for a project whose headline claim is "open source."
 
@@ -132,7 +132,7 @@ Ten phases. Small, ordered so infrastructure and shared types land first, and ri
 
 Gate: if 0b or 0c fails, the design changes before a line of app code is written. This is the whole point of the phase.
 
-**Phase 1, scaffold.** Xcode project, bundle ID, Developer ID signing from the first commit so TCC grants survive rebuilds, `LSUIElement` accessory app, test target, `~/Library/Application Support/vtt/`.
+**Phase 1, scaffold.** Xcode project, bundle ID, Developer ID signing from the first commit so TCC grants survive rebuilds, `LSUIElement` accessory app, test target, `~/Library/Application Support/utter/`.
 
 **Phase 2, permission onboarding.** The three grants, a first-run flow, a permission state model, and a menu bar item that names the missing grant. Nothing else works without this, so it lands before anything that depends on it.
 

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="strokeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad3)"/>
+  <rect width="510" height="510" x="1" y="1" rx="114" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+
+  <!-- Voice Resonance Catalyst Dot -->
+  <circle cx="256" cy="200" r="14" fill="#38BDF8"/>
+
+  <!-- Continuous Acoustic Ribbon -->
+  <path d="M 160 150 L 160 310 C 160 380, 220 260, 256 260 C 292 260, 352 380, 352 310 L 352 150"
+        fill="none"
+        stroke="url(#strokeGrad3)"
+        stroke-width="28"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>

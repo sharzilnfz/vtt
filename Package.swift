@@ -3,59 +3,59 @@
 import PackageDescription
 
 let package = Package(
-    name: "VTT",
+    name: "Utter",
     platforms: [
         .macOS(.v15)
     ],
     products: [
-        .executable(name: "VTT", targets: ["VTT"]),
-        .library(name: "VTTCore", targets: ["VTTCore"]),
-        .executable(name: "vtt-test-runner", targets: ["VTTTests"]),
-        .executable(name: "VTTModelCheck", targets: ["VTTModelCheck"]),
-        .executable(name: "VTTRenderPreview", targets: ["VTTRenderPreview"]),
+        .executable(name: "Utter", targets: ["Utter"]),
+        .library(name: "UtterCore", targets: ["UtterCore"]),
+        .executable(name: "utter-test-runner", targets: ["UtterTests"]),
+        .executable(name: "UtterModelCheck", targets: ["UtterModelCheck"]),
+        .executable(name: "UtterRenderPreview", targets: ["UtterRenderPreview"]),
     ],
     dependencies: [
         .package(path: "Packages/FluidAudio"),
     ],
     targets: [
         .target(
-            name: "VTTCore",
+            name: "UtterCore",
             dependencies: [
                 .product(name: "FluidAudio", package: "FluidAudio")
             ],
-            path: "Sources/VTTCore",
+            path: "Sources/UtterCore",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
         .executableTarget(
-            name: "VTT",
-            dependencies: ["VTTCore"],
-            path: "Sources/VTT",
+            name: "Utter",
+            dependencies: ["UtterCore"],
+            path: "Sources/Utter",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
         .executableTarget(
-            name: "VTTModelCheck",
-            dependencies: ["VTTCore", .product(name: "FluidAudio", package: "FluidAudio")],
-            path: "Sources/VTTModelCheck",
+            name: "UtterModelCheck",
+            dependencies: ["UtterCore", .product(name: "FluidAudio", package: "FluidAudio")],
+            path: "Sources/UtterModelCheck",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
         .executableTarget(
-            name: "VTTTests",
-            dependencies: ["VTTCore"],
-            path: "Tests/VTTTests",
+            name: "UtterTests",
+            dependencies: ["UtterCore"],
+            path: "Tests/UtterTests",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
         .executableTarget(
-            name: "VTTRenderPreview",
-            dependencies: ["VTTCore"],
-            path: "Sources/VTTRenderPreview",
+            name: "UtterRenderPreview",
+            dependencies: ["UtterCore"],
+            path: "Sources/UtterRenderPreview",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]

@@ -1,4 +1,4 @@
-# VTT unified plan
+# Utter unified plan
 
 ## What this document is
 
@@ -27,7 +27,7 @@ You hold a key, talk, and let go. The app records your voice, turns it into text
 
 ## Where your data lives
 
-Everything sits under `~/Library/Application Support/vtt/`. Two SQLite tables keep your words out of permanent storage. A rolling ten item buffer holds recent raw and refined transcripts so you can re-insert them after a failed delivery. A second table holds content free counters, words per day and seconds per mode, with no text at all. Custom vocabulary aliases live in a JSON file. Audio is never written to disk.
+Everything sits under `~/Library/Application Support/utter/`. Two SQLite tables keep your words out of permanent storage. A rolling ten item buffer holds recent raw and refined transcripts so you can re-insert them after a failed delivery. A second table holds content free counters, words per day and seconds per mode, with no text at all. Custom vocabulary aliases live in a JSON file. Audio is never written to disk.
 
 ## Audio, one place where the spec changes
 

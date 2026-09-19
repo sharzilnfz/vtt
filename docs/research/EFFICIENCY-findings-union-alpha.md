@@ -1,4 +1,4 @@
-# VTT efficiency research and foundation recommendation
+# Utter efficiency research and foundation recommendation
 
 Research by Union Alpha. September 17, 2026.
 
@@ -71,12 +71,12 @@ Temporary files may not survive cleanup. This document preserves the observation
 
 ### What remains unverified
 
-- A complete MiniWhisper or reduced VTT build.
+- A complete MiniWhisper or reduced Utter build.
 - Actual transcription through Apple Speech on this machine.
 - Comparative latency, accuracy, memory, or energy across engines.
 - Resource release after unloading CoreML models.
 - A telemetry-free, reduced application build.
-- Any claim that the recommended stack is the most efficient VTT on the market.
+- Any claim that the recommended stack is the most efficient voice-to-text on the market.
 
 An earlier `xcodebuild -version` check failed because the active developer directory was Command Line Tools. No `Xcode*.app` was found under `/Applications`. No developer settings were changed.
 
@@ -311,7 +311,7 @@ Sources:
 - [Quill](https://github.com/imtamiliniyan/quill)
 - [VoiceScribe](https://github.com/eddmann/VoiceScribe)
 
-Repository popularity and small source size were not treated as performance measurements. This was a targeted comparison, not an exhaustive survey of every VTT application.
+Repository popularity and small source size were not treated as performance measurements. This was a targeted comparison, not an exhaustive survey of every voice-to-text application.
 
 ## Benchmark definition
 

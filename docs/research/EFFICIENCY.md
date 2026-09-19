@@ -129,9 +129,9 @@ Utterances under 15 seconds are a single pass, and that covers most dictation. L
 A harness is at `scripts/measure-efficiency.sh`. It measures resident memory via `footprint`, peak memory via `phys_footprint_peak`, and idle CPU as the exact delta in cumulative CPU time over the sampling window rather than a decaying average. Deep mode adds energy, CPU ms/s and timer wakeups via `powermetrics`.
 
 ```
-./scripts/measure-efficiency.sh -i 60 VTT
-./scripts/measure-efficiency.sh -i 60 VTT Handy FluidVoice VoiceInk
-sudo ./scripts/measure-efficiency.sh -d VTT
+./scripts/measure-efficiency.sh -i 60 Utter
+./scripts/measure-efficiency.sh -i 60 Utter Handy FluidVoice VoiceInk
+sudo ./scripts/measure-efficiency.sh -d Utter
 ```
 
 Run it in a normal Terminal. `ps` and `top` are blocked for other processes inside a sandbox, so a sandboxed run reports memory only. With no target it measures the calling shell, which doubles as a self test. I verified that path, and it reports real numbers for named apps.

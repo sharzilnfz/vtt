@@ -4,20 +4,20 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CONFIGURATION="${CONFIGURATION:-release}"
 SIGNING_IDENTITY="${SIGNING_IDENTITY:--}"
-APP="$ROOT/.build/VTT.app"
+APP="$ROOT/.build/Utter.app"
 
 cd "$ROOT"
-swift build --configuration "$CONFIGURATION" --product VTT
+swift build --configuration "$CONFIGURATION" --product Utter
 BIN_DIR="$(swift build --configuration "$CONFIGURATION" --show-bin-path)"
 
 # Assemble in a fresh staging directory so failed builds leave the previous app intact.
-STAGING="$(mktemp -d "$ROOT/.build/VTT-package.XXXXXX")"
+STAGING="$(mktemp -d "$ROOT/.build/Utter-package.XXXXXX")"
 trap 'rm -rf "$STAGING"' EXIT
-BUNDLE="$STAGING/VTT.app"
+BUNDLE="$STAGING/Utter.app"
 mkdir -p "$BUNDLE/Contents/MacOS" "$BUNDLE/Contents/Resources"
-cp "$BIN_DIR/VTT" "$BUNDLE/Contents/MacOS/VTT"
+cp "$BIN_DIR/Utter" "$BUNDLE/Contents/MacOS/Utter"
 cp "$ROOT/scripts/Info.plist" "$BUNDLE/Contents/Info.plist"
-chmod +x "$BUNDLE/Contents/MacOS/VTT"
+chmod +x "$BUNDLE/Contents/MacOS/Utter"
 
 # Preserve package resources in the standard signed-app resource directory.
 shopt -s nullglob

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad2)"/>
+  <rect width="510" height="510" x="1" y="1" rx="114" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+
+  <!-- 5-Bar Sonic U -->
+  <!-- Bar 1 (Left Tallest) -->
+  <rect x="144" y="144" width="26" height="224" rx="13" fill="#F8FAFC"/>
+  <!-- Bar 2 (Mid-Left) -->
+  <rect x="190" y="210" width="26" height="142" rx="13" fill="url(#cyanGrad2)"/>
+  <!-- Bar 3 (Center Base) -->
+  <rect x="236" y="260" width="26" height="76" rx="13" fill="#38BDF8"/>
+  <!-- Bar 4 (Mid-Right) -->
+  <rect x="282" y="210" width="26" height="142" rx="13" fill="url(#cyanGrad2)"/>
+  <!-- Bar 5 (Right Tallest) -->
+  <rect x="328" y="144" width="26" height="224" rx="13" fill="#F8FAFC"/>
+</svg>

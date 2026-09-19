@@ -1,4 +1,4 @@
-# VTT architecture and implementation plan review
+# Utter architecture and implementation plan review
 
 Reviewed by Union Alpha on September 17, 2026.
 

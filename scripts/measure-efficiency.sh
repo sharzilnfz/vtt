@@ -17,9 +17,9 @@
 # With no target, measures the calling shell, which doubles as a self test.
 #
 # Examples
-#   ./measure-efficiency.sh VTT
-#   ./measure-efficiency.sh -i 60 VTT Handy FluidVoice VoiceInk
-#   sudo ./measure-efficiency.sh -d VTT
+#   ./measure-efficiency.sh Utter
+#   ./measure-efficiency.sh -i 60 Utter Handy FluidVoice VoiceInk
+#   sudo ./measure-efficiency.sh -d Utter
 #
 # Method
 #   Resident memory comes from footprint(1), which reports phys_footprint and

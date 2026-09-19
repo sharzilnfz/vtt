@@ -1,4 +1,4 @@
-# Project Context: VTT (Minimal Voice-to-Text with AI Enhancement)
+# Project Context: Utter (Minimal Voice-to-Text with AI Enhancement)
 
 ## 1. Vision
 
@@ -60,12 +60,12 @@ It eliminates closed-source runtimes, background telemetry, and complex model st
 
 ## 5. Storage and Paths
 
-- **Application Directory:** `~/Library/Application Support/vtt/`.
-- **Model Storage:** `~/Library/Application Support/vtt/models/` (or pointers to FluidAudio model store).
-- **History and Stats:** SQLite database at `~/Library/Application Support/vtt/history.db`.
+- **Application Directory:** `~/Library/Application Support/utter/`.
+- **Model Storage:** `~/Library/Application Support/utter/models/` (or pointers to FluidAudio model store).
+- **History and Stats:** SQLite database at `~/Library/Application Support/utter/history.db`.
 - **Table 1 (Safety Buffer):** Rolling 10 records with `id`, `timestamp`, `raw_text`, `refined_text`, `mode`, `status`.
 - **Table 2 (Daily Aggregates):** Content-free counters with `date`, `word_count`, `duration_ms`, `mode`. Text is never stored permanently.
-- **Custom Vocabulary:** `~/Library/Application Support/vtt/vocabulary.json`.
+- **Custom Vocabulary:** `~/Library/Application Support/utter/vocabulary.json`.
 
 ## 6. System Boundaries and Dependencies
 
@@ -83,7 +83,7 @@ It eliminates closed-source runtimes, background telemetry, and complex model st
 - **ADR 005: Reject Embedded LLM Runtime.** An OpenAI-compatible HTTP client handles CLI proxy, Ollama, and remote providers through a single protocol with zero binary bloat.
 - **ADR 006: Explicit Session State Machine and Re-entrancy Lock.** A new recording request while transcribing or refining is rejected. No overlapping sessions.
 - **ADR 007: Fallback to Raw Transcript on AI Failure.** If the CLI proxy is offline, times out, or fails, the app must never swallow the user's speech. It pastes the raw transcript.
-- **ADR 008: macOS Standard Paths.** Store all app data under `~/Library/Application Support/vtt/`.
+- **ADR 008: macOS Standard Paths.** Store all app data under `~/Library/Application Support/utter/`.
 
 ## 8. Implementation Plan
 
